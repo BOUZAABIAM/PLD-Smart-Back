@@ -1,0 +1,23 @@
+<div>
+    <label>Point's Type: </label>
+    <select (change)="filterForeCasts($event.target.value)">
+        <option value="0">--All--</option>
+        <option value="1">Entry Point</option>
+        <option value="2">Connector</option>
+        <option value="3">Beacon</option>
+                    
+       
+    </select>
+</div>
+<div *ngFor="let file of fileUploads | async">
+		<div class="panel-body">
+			<image-upload [fileUpload]='file'></image-upload>
+			
+
+		</div>
+	</div>
+
+
+
+
+ 
